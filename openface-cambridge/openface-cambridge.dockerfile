@@ -65,5 +65,6 @@ RUN rm 3.1.0.zip
 # set working directory
 WORKDIR /opt/OpenFace/build/bin
 
+# only for internal use
 # copy feature extraction script over
-COPY ./start_feature_extraction.sh /opt/OpenFace/build/bin
+# COPY ./start_feature_extraction.sh /opt/OpenFace/build/bin
