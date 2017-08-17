@@ -24,13 +24,13 @@ RUN apt-get update && \
 RUN apt-get install -y \
 	libopencv-dev libjpeg-dev libjasper-dev libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev libxine2 libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev libv4l-dev libtbb-dev libqt4-dev libgtk2.0-dev libmp3lame-dev 	libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev libpng12-dev libtiff5-dev
 
-# copy openSMILE tar.gz over
-COPY ./opensmile-2.3.0.tar.gz ./2.4.13.3.zip /opt/
+# download and extract openSMILE
+RUN wget http://audeering.com/download/1318/opensmile-2.3.0.tar.gz && \
+	tar -xf opensmile-2.3.0.tar.gz -C /opt
 
-# unzip openSMILE and OpenCV
-RUN cd /opt && \
-	tar -xvf opensmile-2.3.0.tar.gz && \
-	unzip 2.4.13.3.zip
+# download and extract OpenCV
+RUN wget https://github.com/opencv/opencv/archive/2.4.13.3.zip && \
+	unzip 2.4.13.3.zip -d /opt
 
 # install OpenCV first
 RUN mkdir -p /opt/opencv-2.4.13.3/release && cd /opt/opencv-2.4.13.3/release && \

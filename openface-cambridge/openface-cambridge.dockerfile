@@ -44,11 +44,11 @@ RUN wget https://github.com/Itseez/opencv/archive/3.1.0.zip && \
 	make -j2 && \
 	make install
 
-# successfully built using commit SHA f571af1c8414d1dc9df02d71c967126d7863662c
+# successfully built using commit SHA cdd258330f2d3f121005ab3ed0233c9442402afb
 RUN cd /opt && \
 	git clone https://github.com/TadasBaltrusaitis/OpenFace.git && \
 	cd OpenFace && \
-	git reset --hard f571af1c8414d1dc9df02d71c967126d7863662c && \
+	git reset --hard cdd258330f2d3f121005ab3ed0233c9442402afb && \
 	mkdir build && \
 	cd build && \
 	cmake -D CMAKE_BUILD_TYPE=RELEASE .. && \
@@ -65,6 +65,6 @@ RUN rm 3.1.0.zip
 # set working directory
 WORKDIR /opt/OpenFace/build/bin
 
-# only for internal use
+# internal use only
 # copy feature extraction script over
 # COPY ./start_feature_extraction.sh /opt/OpenFace/build/bin
