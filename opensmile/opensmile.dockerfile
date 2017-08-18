@@ -44,4 +44,6 @@ RUN cd /opt/opensmile-2.3.0/ && \
 	./buildWithPortAudio.sh -o /usr/local/lib && \
 	./buildStandalone.sh -o /usr/local/lib
 
+# set working directory
+WORKDIR /opt/opensmile-2.3.0/inst/bin
 
