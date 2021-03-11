@@ -15,3 +15,5 @@ To start, run `docker build -t opensmile --file opensmile.dockerfile .`
 This file will be downloaded and extracted during the docker build process: [OpenCV 4.1.0](https://opencv.org/opencv-4-1/).
 
 To start, run `docker build -t openface-cambridge --file openface.dockerfile .`
+
+Note that you'll need these files to be located in the same directory as `openface.dockerfile` above in order to run the build process: `haarcascade_frontalface_alt.xml, cen_patches_0.35_of.dat, cen_patches_0.50_of.dat, cen_patches_0.25_of.dat, cen_patches_1.00_of.dat`. Due to their large size, they cannot be uploaded here. Please contact me if you are interested.
