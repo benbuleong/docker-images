@@ -12,6 +12,6 @@ To start, run `docker build -t opensmile --file opensmile.dockerfile .`
 
 [OpenFace](https://github.com/TadasBaltrusaitis/OpenFace)
 ---------
-This file will be downloaded and extracted during the docker build process: [OpenCV 3.1.0](https://opencv.org/opencv-4-1/).
+This file will be downloaded and extracted during the docker build process: [OpenCV 4.1.0](https://opencv.org/opencv-4-1/).
 
 To start, run `docker build -t openface-cambridge --file openface.dockerfile .`
