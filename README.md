@@ -2,7 +2,7 @@
 Dockerfiles for some multimodal toolkits
 
 # Plaform
-All images are currently configured for run on Ubuntu 16.04 only
+openSMILE is built for Ubuntu 16.04, while OpenFace is built for Ubuntu 18.04
 
 [openSMILE](http://audeering.com/technology/opensmile)
 ---------
@@ -12,6 +12,6 @@ To start, run `docker build -t opensmile --file opensmile.dockerfile .`
 
 [OpenFace](https://github.com/TadasBaltrusaitis/OpenFace)
 ---------
-This file will be downloaded and extracted during the docker build process: [OpenCV 3.1.0](https://github.com/Itseez/opencv/archive/3.1.0.zip).
+This file will be downloaded and extracted during the docker build process: [OpenCV 3.1.0](https://opencv.org/opencv-4-1/).
 
-To start, run `docker build -t openface-cambridge --file openface-cambridge.dockerfile .`
+To start, run `docker build -t openface-cambridge --file openface.dockerfile .`
